@@ -1,0 +1,44 @@
+# --- Go ---
+# Бинарники
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Coverage
+*.out
+coverage.out
+*.coverprofile
+
+# Build папки
+/bin/
+
+# --- Go modules ---
+# НЕ игнорировать go.mod и go.sum!
+# vendor — обычно не нужен с модулями
+vendor/
+
+# --- Docker ---
+# локальные docker-файлы (если появятся)
+docker-compose.override.yml
+
+# --- Environment ---
+.env
+.env.*
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- IDE ---
+.idea/
+*.iml
+.vscode/
+
+# --- Logs & temp ---
+*.log
+*.tmp
+*.pid

@@ -1,0 +1,25 @@
+package middleware
+
+import (
+	"log"
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
+
+func Recovery() gin.HandlerFunc {
+	return func(ctx *gin.Context) {
+		defer func () {
+			if err := recover(); err != nil {
+				log.Printf("panic recovered: %v", err)
+
+				ctx.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{
+					"error": "internal server error",					
+				})
+			}
+		}()
+
+		ctx.Next()
+
+	}
+}
