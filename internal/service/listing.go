@@ -5,17 +5,17 @@ import (
 	"log"
 	"time"
 
-	"marketplace/internal/domain"
-	"marketplace/internal/repository"
+	"github.com/T-AKHMAD/marketplace-backend/internal/domain"
+	"github.com/T-AKHMAD/marketplace-backend/internal/repository"
 )
 
 type ListingService struct {
-	pgRepo  *repository.ListingPostgresRepository
+	pgRepo *repository.ListingPostgresRepository
 }
 
-func NewListingService(	pg *repository.ListingPostgresRepository) *ListingService {
+func NewListingService(pg *repository.ListingPostgresRepository) *ListingService {
 	return &ListingService{
-		pgRepo:  pg,
+		pgRepo: pg,
 	}
 }
 
@@ -26,7 +26,7 @@ func (s *ListingService) Create(ctx context.Context, title, description string, 
 		Price:       price,
 		CreatedAt:   time.Now(),
 	}
-	
+
 	l, err := s.pgRepo.Create(ctx, l)
 	if err != nil {
 		return domain.Listing{}, err

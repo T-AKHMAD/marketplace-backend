@@ -3,12 +3,12 @@ package main
 import (
 	"context"
 	"log"
-	"marketplace/internal/cache"
-	"marketplace/internal/db"
-	"marketplace/internal/httpapi"
-	"marketplace/internal/queue"
-	"marketplace/internal/repository"
-	"marketplace/internal/service"
+	"github.com/T-AKHMAD/marketplace-backend/internal/cache"
+	"github.com/T-AKHMAD/marketplace-backend/internal/db"
+	"github.com/T-AKHMAD/marketplace-backend/internal/httpapi"
+	"github.com/T-AKHMAD/marketplace-backend/internal/queue"
+	"github.com/T-AKHMAD/marketplace-backend/internal/repository"
+	"github.com/T-AKHMAD/marketplace-backend/internal/service"
 )
 
 func main() {

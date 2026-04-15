@@ -1,6 +1,6 @@
 package repository
 
-import "marketplace/internal/domain"
+import "github.com/T-AKHMAD/marketplace-backend/internal/domain"
 
 type ListingRepository struct {
 	items  []domain.Listing

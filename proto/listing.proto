@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package listing;
+
+option go_package = "github.com/T-AKHMAD/marketplace-backend/internal/grpc/pb;pb";
+
+service ListingService {
+  rpc GetListing (GetListingRequest) returns (GetListingResponse);
+}
+
+message GetListingRequest {
+  int64 id = 1;
+}
+
+message GetListingResponse {
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  int64 price = 4;
+  string created_at = 5;
+}

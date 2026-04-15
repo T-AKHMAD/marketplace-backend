@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 	"log"
-	"marketplace/internal/domain"
-	"marketplace/internal/queue"
+	"github.com/T-AKHMAD/marketplace-backend/internal/domain"
+	"github.com/T-AKHMAD/marketplace-backend/internal/queue"
 
 	"github.com/rabbitmq/amqp091-go"
 )

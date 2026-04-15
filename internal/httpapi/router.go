@@ -1,9 +1,9 @@
 package httpapi
 
 import (
-	"marketplace/internal/httpapi/handlers"
-	"marketplace/internal/httpapi/middleware"
-	"marketplace/internal/service"
+	"github.com/T-AKHMAD/marketplace-backend/internal/httpapi/handlers"
+	"github.com/T-AKHMAD/marketplace-backend/internal/httpapi/middleware"
+	"github.com/T-AKHMAD/marketplace-backend/internal/service"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

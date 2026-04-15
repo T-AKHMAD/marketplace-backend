@@ -2,7 +2,7 @@ package repository
 
 import (
 	"context"
-	"marketplace/internal/domain"
+	"github.com/T-AKHMAD/marketplace-backend/internal/domain"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
